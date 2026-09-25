@@ -86,7 +86,7 @@ Este proyecto implementa la estructura de datos **Pila (Stack)** utilizando excl
 
 ## Procedimiento de Prueba y Ejemplos de Uso
 
-Sigue esta secuencia en tu navegador para verificar el correcto funcionamiento LIFO de la Pila:
+Seguir esta secuencia en el navegador para verificar el correcto funcionamiento LIFO de la Pila:
 
 * **Obtener Tamaño Inicial:**
  ```cmd

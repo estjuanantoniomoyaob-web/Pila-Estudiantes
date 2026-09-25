@@ -88,19 +88,10 @@ Este proyecto implementa la estructura de datos **Pila (Stack)** utilizando excl
 Sigue esta secuencia en tu navegador para verificar el correcto funcionamiento LIFO de la Pila:
 
 * **Obtener Tamaño Inicial:**
-* http://localhost:8080/api/v1/tamanyo
+ ```cmd
+     http://localhost:8080/api/v1/tamanyo
+     ```
 * **Insertar Primer Estudiante:** http://localhost:8080/api/v1/insertar?codigo=101&nombres=Juan Antonio&apellidos=Moya Oblitas &email=est.juanantonio.moya.ob@unifranz.edu.bo&fechaNacimiento=2005-08-09&genero=M
 * **Insertar Segundo Estudiante:** http://localhost:8080/api/v1/insertar?codigo=102&nombres=Dabeyba Jessica&apellidos=Perez Chura&email=JessiPerez@email.com&fechaNacimiento=2006-05-12&genero=F
 * **Ver Pila:** http://localhost:8080/api/v1/ver
 * **Eliminar (Desapilar):** http://localhost:8080/api/v1/eliminar
-* **Obtener Tamaño Final:** http://localhost:8080/api/v1/tamanyo
-* **Insertar Primer Estudiante:** http://localhost:8080/api/v1/insertar?codigo=101&nombres=Juan Antonio&apellidos=Moya Oblitas &email=est.juanantonio.moya.ob@unifranz.edu.bo&fechaNacimiento=2005-08-09&genero=M
-* **Insertar Segundo Estudiante:** http://localhost:8080/api/v1/insertar?codigo=102&nombres=Dabeyba Jessica&apellidos=Perez Chura&email=JessiPerez@email.com&fechaNacimiento=2006-05-12&genero=F
-* **Ver Pila:** http://localhost:8080/api/v1/ver
-* **Eliminar (Desapilar):** http://localhost:8080/api/v1/eliminar
-* **Obtener Tamaño Final:** http://localhost:8080/api/v1/tamanyo
-* **Insertar Primer Estudiante:** http://localhost:8080/api/v1/insertar?codigo=101&nombres=Juan Antonio&apellidos=Moya Oblitas &email=est.juanantonio.moya.ob@unifranz.edu.bo&fechaNacimiento=2005-08-09&genero=M
-* **Insertar Segundo Estudiante:** http://localhost:8080/api/v1/insertar?codigo=102&nombres=Dabeyba Jessica&apellidos=Perez Chura&email=JessiPerez@email.com&fechaNacimiento=2006-05-12&genero=F
-* **Ver Pila:** http://localhost:8080/api/v1/ver
-* **Eliminar (Desapilar):** http://localhost:8080/api/v1/eliminar
-* **Obtener Tamaño Final:** http://localhost:8080/api/v1/tamanyo

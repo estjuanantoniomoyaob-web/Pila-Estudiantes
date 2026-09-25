@@ -1,7 +1,7 @@
 # Estructura de Datos: Pila (Stack) de Estudiantes en Java Spring Boot
 
 Este proyecto implementa la estructura de datos **Pila (Stack)** utilizando exclusivamente **arreglos estáticos nativos de Java** en el marco de una aplicación web construida con **Spring Boot**.
-## 👥 Datos del Estudiante
+## 👥 Datos Personales
 * **Nombre:** Juan Antonio Moya
 * **Correo:** est.juanantonio.moya.ob@unifranz.edu.bo
 * **Materia:** Estructura de Datos (EDA-311)

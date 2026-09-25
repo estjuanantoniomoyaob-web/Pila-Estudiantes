@@ -1,54 +1,50 @@
 # Estructura de Datos: Pila (Stack) de Estudiantes en Java Spring Boot
 
-Este proyecto implementa la estructura de datos **Pila (Stack)** utilizando exclusivamente **arreglos estáticos nativos de Java** (sin el uso de `ArrayList` ni colecciones dinámicas) en el marco de una aplicación web construida con **Spring Boot**.
+Este proyecto implementa la estructura de datos **Pila (Stack)** utilizando exclusivamente **arreglos estáticos nativos de Java** (de tamaño fijo y sin colecciones dinámicas como `ArrayList`). Todo está expuesto mediante una interfaz REST web usando **Spring Boot**.
+
+---
 
 ## 👥 Datos del Estudiante
 * **Nombre:** Juan Antonio Moya
+* **Correo Institucional:** est.juanantonio.moya.ob@unifranz.edu.bo
 * **Materia:** Estructura de Datos (EDA-311)
-* **Proyecto:** Implementación de Pila con Arreglos Fijos
+* **Universidad:** Unifranz
 
 ---
 
-## 📌 Descripción del Proyecto
+## 📌 Descripción de la Pila
 
-El objetivo es gestionar una pila de objetos de tipo `Estudiante` aplicando el principio **LIFO** (*Last In, First Out* — Último en entrar, primero en salir). La capacidad máxima del arreglo estático está definida en **50 elementos**.
+Una **Pila** es una estructura de datos lineal que sigue el principio **LIFO** (*Last In, First Out*), lo que significa que el **último elemento en ingresar es el primero en salir**.
 
-### Atributos del Estudiante
-Cada objeto `Estudiante` almacena las siguientes propiedades:
-1. `codigo` (String)
-2. `nombres` (String)
-3. `apellidos` (String)
-4. `email` (String)
-5. `fechaNacimiento` (String)
-6. `genero` (char)
-
----
-
-## ⚙️ Estructura del Código
-
-* **`com.Estructura_Pila_Estudiantes.estructura.Pila`**: Contiene la lógica interna de la Pila basada en un arreglo de tamaño fijo (`Estudiante[]`).
-* **`com.Estructura_Pila_Estudiantes.controladores.Endpoints`**: Expone las rutas HTTP (endpoints REST) para interactuar con la pila desde un navegador o cliente HTTP.
-* **`com.Estructura_Pila_Estudiantes.estructura.Estudiante`**: Clase modelo que define la entidad estudiante.
-* **`com.Estructura_Pila_Estudiantes.estructura.PilaEstudiantesApplication`**: Clase principal encargada de arrancar la aplicación de Spring Boot.
+El arreglo estático de esta pila está limitado a un máximo de **50 elementos**. Cada elemento es un objeto de la clase `Estudiante` que almacena:
+* `codigo`: Identificador único del estudiante.
+* `nombres`: Nombre(s) del estudiante.
+* `apellidos`: Apellido(s) del estudiante.
+* `email`: Correo electrónico.
+* `fechaNacimiento`: Fecha de nacimiento (`YYYY-MM-DD`).
+* `genero`: Género (`M` o `F`).
 
 ---
 
-## 🛠️ Operaciones de la Pila (Endpoints)
+## 🛠️ Explicación Detallada de los Enlaces (URLs / Endpoints)
 
-Todas las peticiones están expuestas bajo el prefijo `/api/v1`:
+Una vez que la aplicación está ejecutándose localmente (`http://localhost:8080`), puedes probar y verificar el funcionamiento de la pila ingresando las siguientes URLs directamente en la barra de direcciones de tu navegador:
 
-| Operación | Método | Endpoint / URL | Descripción |
-| :--- | :--- | :--- | :--- |
-| **Insertar** | `GET` | `/api/v1/insertar?codigo=...&nombres=...` | Agrega (empuja) un nuevo estudiante al tope de la pila. |
-| **Eliminar** | `GET` | `/api/v1/eliminar` | Remueve y retorna el estudiante ubicado en el tope de la pila. |
-| **Ver Pila** | `GET` | `/api/v1/ver` | Muestra el estado actual de la pila en orden LIFO. |
-| **Tamaño** | `GET` | `/api/v1/tamanyo` | Retorna la cantidad actual de elementos en la pila. |
+### 1. Consultar Tamaño Actual de la Pila
+Muestra la cantidad total de estudiantes almacenados en ese momento.
+* **Método:** `GET`
+* **URL:** `http://localhost:8080/api/v1/tamanyo`
+* **Ejemplo de Respuesta:** `Tamanyo: 0`
 
 ---
 
-## 🚀 Cómo ejecutar el proyecto
+### 2. Insertar (Apilar / Push) un Estudiante
+Para insertar un registro en la Pila, se envían los atributos del estudiante como parámetros de consulta en la URL mediante el uso de `?` y `&`.
 
-1. Abrir la terminal integrada en la raíz del proyecto.
-2. Compilar y ejecutar la aplicación con el comando:
-   ```bash
-   ./mvnw spring-boot:run
+* **Método:** `GET`
+* **Estructura de la URL:**
+  `http://localhost:8080/api/v1/insertar?codigo=VALOR&nombres=VALOR&apellidos=VALOR&email=VALOR&fechaNacimiento=VALOR&genero=VALOR`
+
+* **Ejemplo de uso en el navegador (Copiar y pegar):**
+  ```text
+  http://localhost:8080/api/v1/insertar?codigo=101&nombres=Juan&apellidos=Moya&email=est.juanantonio.moya.ob@unifranz.edu.bo&fechaNacimiento=2000-01-01&genero=M

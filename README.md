@@ -7,7 +7,11 @@ Este proyecto implementa la estructura de datos **Pila (Stack)** utilizando excl
 * **Materia:** Estructura de Datos (EDA-311)
 
 ---
-
+## Clonar
+**Clonar el repositorio:**
+   ```cmd
+   git clone https://github.com/estjuanantoniomoyaob-web/Pila-Estudiantes.git 
+   ```
 ## Cómo ejecutar el proyecto Spring Boot (CMD / Terminal)
 
 1. Abre la consola en la raíz de la carpeta del proyecto.
